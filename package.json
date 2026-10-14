@@ -1,0 +1,61 @@
+{
+  "name": "cut-house-moon-hp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build && opennextjs-cloudflare build --skip-build",
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy:dev": "opennextjs-cloudflare build --env dev && opennextjs-cloudflare deploy --env dev",
+    "deploy:stg": "opennextjs-cloudflare build --env stg && opennextjs-cloudflare deploy --env stg",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "cf-typegen:dev": "wrangler types --env dev --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "cf-typegen:stg": "wrangler types --env stg --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "seed": "tsx src/db/seed.ts"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.9",
+    "@mui/material": "^7.3.9",
+    "@mui/material-nextjs": "^7.3.9",
+    "@neondatabase/serverless": "^1.0.2",
+    "@opennextjs/cloudflare": "^1.19.5",
+    "drizzle-orm": "^0.45.1",
+    "next": "^16.2.4",
+    "pg": "^8.20.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "overrides": {
+    "@esbuild-kit/core-utils": {
+      "esbuild": "^0.25.0"
+    },
+    "postcss": ">=8.5.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20.19.37",
+    "@types/pg": "^8.20.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.3.1",
+    "drizzle-kit": "^0.31.10",
+    "esbuild": "^0.27.0",
+    "eslint": "^9",
+    "eslint-config-next": "^16.2.4",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.87.0"
+  }
+}

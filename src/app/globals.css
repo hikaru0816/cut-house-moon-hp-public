@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+:root {
+  /* フォント */
+  --font-sans:
+    var(--font-geist-sans), 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  --font-mono:
+    var(--font-geist-mono), Menlo, Monaco, Consolas, 'Osaka-mono', 'MS Gothic', monospace;
+  --font-serif: 'Hiragino Mincho ProN', 'Yu Mincho', YuMincho, 'MS Mincho', serif;
+
+  /* ウッディ/ウォームトーンのカラーパレット */
+  --color-accent-beige: #d7ccc8; /* アクセントのベージュ/ゴールド */
+  --color-soft-brown: #8d6e63; /* メインのソフトブラウン */
+  --color-light-brown: #a1887f; /* 明るめブラウン */
+  --color-dark-brown: #4e342e; /* ダークウッドブラウン */
+  --color-dark-text: #3e2723; /* 濃いブラウン（黒の代わり） */
+  --color-gray-brown: #795548; /* ブラウンがかったグレー */
+  --color-bg-ivory: #faf9f6; /* 温かみのあるアイボリー（背景） */
+  --color-border-light: #efebe9;
+  --color-white: #ffffff;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-ivory);
+    color: var(--color-dark-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}

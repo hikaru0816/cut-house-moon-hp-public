@@ -1,0 +1,16 @@
+.next/
+out/
+build/
+node_modules/
+next-env.d.ts
+cloudflare-env.d.ts
+.open-next/
+.wrangler/
+package-lock.json
+drizzle/meta/
+
+# vercel-labs/agent-skills からの取得物。今後の追従(skills update)で
+# 差分が出ないよう、Prettierでの再フォーマット対象から除外する。
+.claude/skills/vercel-react-best-practices/
+.claude/skills/vercel-composition-patterns/
+.claude/skills/web-design-guidelines/
